@@ -1,0 +1,8 @@
+{% extends "layout.html" %}
+{% block contents %}
+    <form action="/post" method="POST">
+        <input type="text" placeholder="投稿者の名前を入力してください" name="name">
+        <input type="text" placeholder="投稿内容を入力してください" name="content">
+        <button type="submit">投稿</button>
+    </form>
+{% endblock %}

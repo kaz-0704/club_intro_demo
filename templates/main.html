@@ -1,0 +1,53 @@
+{% extends "layout.html" %}
+{% block contents %}
+    <p>大学の部活やサークル、スポーツクラブなどに関する情報サイト</p>
+    <p>あなたの好みに合ったクラブが見つかる</p>
+    <div class="search_form">
+        <label for="search">クラブ検索</label>
+        <input type="checkbox" id="search">
+        <div class="hidden">
+            <h3>キーワード検索</h3>
+            <form method="POST">
+                <input type="text" placeholder="キーワード" name="search_name">
+            </form>
+            <h3>条件検索</h3>
+            <form method="POST">
+                <table class="search_condition">
+                <tr>
+                    <th><div class="university">
+                        <h4>大学</h4>
+                    </div></th>
+                    <th><input type="checkbox" name="TyukyoU">中京大学</th>
+                    <th><input type="checkbox" name="NagoyaU">名古屋大学</th>
+                    <th><input type="checkbox" name="NanzanU">南山大学</th>
+                </tr>
+                <tr>
+                    <th><div class="area">
+                        <h4>エリア</h4>
+                    </div></th>
+                    <th><input type="checkbox" name="nagoya">名古屋市内</th>
+                </tr>
+                <tr>
+                    <th><div class="category">
+                        <h4>カテゴリ</h4>
+                    </div></th>
+                    <th><input type="checkbox" name="circle">サークル</th>
+                    <th><input type="checkbox" name="circle">部活</th>
+                </tr>
+                </table>
+                <input type="submit" value="検索">
+            </form>
+        </div>
+    </div>
+    <button class="button" onclick="location.href='/register'">ユーザー登録</button>
+    <button class="button" onclick="location.href='/register'">クラブ登録</button>
+    <button class="button" onclick="location.href='/post'">記事投稿</button>
+    <h2>クラブ情報</h2>
+    <table border="1">
+        {% for co in cont %}
+        <tr>
+            <th>投稿者：{{ co.name }}</th><th>{{ co.content }}</th>
+        </tr>
+        {% endfor %}
+    </table>
+{% endblock %}
