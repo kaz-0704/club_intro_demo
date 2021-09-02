@@ -1,0 +1,28 @@
+{% extends "layout.html" %}
+{% block contents %}
+<table border="1">
+    <tr>
+        <th>名前</th>
+        <th>パスワード</th>
+    </tr>
+    {% for co in cont %}
+        <tr>
+            <th>{{ co.name }}</th>
+            <th>{{ co.password }}</th>
+        </tr>
+    {% endfor %}
+</table>
+<form action="/user_register" method="POST">
+    <table>
+        <tr>
+            <th>名前</th>
+            <th>パスワード</th>
+        </tr>
+        <tr>
+            <th><input type="text" value="" placeholder="名前を入力してください" name="name"></th>
+            <th><input type="text" value="" placeholder="パスワードを入力してください" name="pass"></th>
+        </tr>
+    </table>
+    <input type="submit" value="登録">
+</form>
+{% endblock %}

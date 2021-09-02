@@ -12,35 +12,62 @@
             </form>
             <h3>条件検索</h3>
             <form method="POST">
-                <table class="search_condition">
-                <tr>
-                    <th><div class="university">
-                        <h4>大学</h4>
-                    </div></th>
-                    <th><input type="checkbox" name="TyukyoU">中京大学</th>
-                    <th><input type="checkbox" name="NagoyaU">名古屋大学</th>
-                    <th><input type="checkbox" name="NanzanU">南山大学</th>
-                </tr>
-                <tr>
-                    <th><div class="area">
-                        <h4>エリア</h4>
-                    </div></th>
-                    <th><input type="checkbox" name="nagoya">名古屋市内</th>
-                </tr>
-                <tr>
-                    <th><div class="category">
-                        <h4>カテゴリ</h4>
-                    </div></th>
-                    <th><input type="checkbox" name="circle">サークル</th>
-                    <th><input type="checkbox" name="circle">部活</th>
-                </tr>
-                </table>
+                <ul class="search_condition">
+                
+                    <div class="university">
+                        <li>
+                            <h4>大学</h4>
+                            <ul>
+                                <li><input type="checkbox" id="scb_u1" name="AichiU"><label for="scb_u1">愛知大学</label></li>
+                                <li><input type="checkbox" id="scb_u2" name="AichigakuinU"><label for="scb_u2">愛知学院大学</label></li>
+                                <li><input type="checkbox" id="scb_u3" name="AichikenritsuU"><label for="scb_u3">愛知県立大学</label></li>
+                                <li><input type="checkbox" id="scb_u4" name="AichikogyoU"><label for="scb_u4">愛知工業大学</label></li>
+                                <li><input type="checkbox" id="scb_u5" name="syukutokuU"><label for="scb_u5">愛知淑徳大学</label></li>
+                                <li><input type="checkbox" id="scb_u6" name="TohoU"><label for="scb_u6">愛知東邦大学</label></li>
+                                <li><input type="checkbox" id="scb_u7" name="mizuhoU"><label for="scb_u7">愛知みずほ大学</label></li>
+                                <li><input type="checkbox" id="scb_u8" name="KinzyoU"><label for="scb_u8">金城学院大学</label></li>
+                                <li><input type="checkbox" id="scb_u9" name="SugiyamaU"><label for="scb_u9">椙山女学園大学</label></li> 
+                                <li><input type="checkbox" id="scb_u10" name="DaidoU"><label for="scb_u10">大同大学</label></li>
+                                <li><input type="checkbox" id="scb_u11" name="TyukyoU"><label for="scb_u11">中京大学</label></li>
+                                <li><input type="checkbox" id="scb_u12" name="TokaiU"><label for="scb_u12">東海学園大学</label></li>
+                                <li><input type="checkbox" id="scb_u13" name="DohoU"><label for="scb_u13">同朋大学</label></li>
+                                <li><input type="checkbox" id="scb_u14" name="NagoyaU"><label for="scb_u14">名古屋大学</label></li>
+                                <li><input type="checkbox" id="scb_u15" name="NagoyagakugeiU"><label for="scb_u15">名古屋学芸大学</label></li>
+                                <li><input type="checkbox" id="scb_u16" name="NagoyakogyoU"><label for="scb_u16">名古屋工業大学</label></li>
+                                <li><input type="checkbox" id="scb_u17" name="NagoyashokaU"><label for="scb_u17">名古屋商科大学</label></li>
+                                <li><input type="checkbox" id="scb_u18" name="NagoyazyosiU"><label for="scb_u18">名古屋女子大学</label></li>
+                                <li><input type="checkbox" id="scb_u19" name="RyuzyoU"><label for="scb_u19">名古屋柳城女子大学</label></li>
+                                <li><input type="checkbox" id="scb_u20" name="NanzanU"><label for="scb_u20">南山大学</label></li>
+                                <li><input type="checkbox" id="scb_u21" name="MeizyoU"><label for="scb_u21">名城大学</label></li>
+                            </ul>
+                        </li>
+                    </div>
+                
+                    <div class="area">
+                        <li>
+                            <h4>エリア</h4>
+                            <ul>
+                                <li><input type="checkbox" id="scb_a1" name="nagoya"><label for="scb_a1">名古屋市内</label></li>
+                            </ul>
+                        </li>
+                    </div>
+                
+                    <div class="category">
+                        <li>
+                            <h4>カテゴリ</h4>
+                            <ul>
+                                <li><input type="checkbox" id="scb_c1" name="sports"><label for="scb_c1">スポーツ系</label></li>
+                                <li><input type="checkbox" id="scb_c2" name="culture"><label for="scb_c2">文化系</label></li>
+                            </ul>
+                        </li>
+                    </div>
+                </ul>
                 <input type="submit" value="検索">
             </form>
         </div>
     </div>
-    <button class="button" onclick="location.href='/register'">ユーザー登録</button>
-    <button class="button" onclick="location.href='/register'">クラブ登録</button>
+    <button class="button" onclick="location.href='/user_register'">ユーザー登録</button>
+    <button class="button" onclick="location.href='/club_register'">クラブ登録</button>
     <button class="button" onclick="location.href='/post'">記事投稿</button>
     <h2>クラブ情報</h2>
     <table border="1">

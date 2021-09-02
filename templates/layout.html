@@ -34,6 +34,8 @@
                 font-family: 'M PLUS Rounded 1c', sans-serif;
                 background-color: rgb(220, 73, 233);
                 padding: 5px;
+                position: sticky;
+                top: 5px;
             }
 
             .gohome {
@@ -44,7 +46,11 @@
                 padding: 10px 10px;
             }
 
-            .search_form label {
+            .search_form {
+                margin: 10px 10px;
+            }
+
+            .search_form > label {
                 display       : inline-block;
                 border-radius : 5%;          /* 角丸       */
                 font-size     : 14px;        /* 文字サイズ */
@@ -73,14 +79,16 @@
                 height: 0;
                 padding: 0;
                 overflow: hidden;
-                opacity: 0;
+                opacity: 0;       /* opacity..透明度 */
                 transition: 0.8s;
             }
 
             .search_form input:checked ~ .hidden {
-                padding: 10px 0;
+                padding: 10px 10px;
                 height: auto;
                 opacity: 1;
+                background-color: #f5a0cb;
+                border-radius : 2%;
             }
 
             h4:before {
@@ -88,6 +96,14 @@
                 content: '\f7a5';
                 font-weight: 900;
                 padding-right: 5px;
+            }
+
+            .search_condition input, label {
+                cursor        : pointer;
+            }
+
+            .search_condition li {
+                display: inline-block;
             }
 
             .button {
@@ -114,7 +130,13 @@
     <body>
         <div id="header">
             ClubBoard
-            <button class="gohome" onclick="location.href='/'"><i class="fas fa-home"></i>HOME</button>
+            <button class="gohome" onclick="location.href='/'"><i class="fas fa-home"></i>ホーム</button>
+            {% if check == False %}
+                <button class="login" onclick="location.href='/login'"><i class="fas fa-sign-in-alt"></i>ログイン</button>
+            {% endif %}
+            {% if check == True %}
+                <button class="clubpage" onclick="location.href='/clubpage'"><i class="fas fa-user-circle"></i>クラブページ</button>
+            {% endif %}
         </div>
         <div id="contents">
             {% block contents %}

@@ -1,0 +1,40 @@
+{% extends "layout.html" %}
+{% block contents %}
+<table border="1">
+    <tr>
+        <th>クラブ名</th>
+        <th>所属</th>
+        <th>活動エリア</th>
+        <th>カテゴリ</th>
+    </tr>
+    <!-- {% for co in cont %}
+        <tr>
+            <th>{{ co.name }}</th>
+            <th>{{ co.belonging }}</th>
+            <th>{{ co.area }}</th>
+            <th>{{ co.category }}</th>
+        </tr>
+    {% endfor %} -->
+</table>
+<form action="/club_register" method="POST">
+    <table>
+        <tr>
+            <th>クラブID</th>
+            <th>パスワード</th>
+            <th>クラブ名</th>
+            <th>所属</th>
+            <th>活動エリア</th>
+            <th>カテゴリ</th>
+        </tr>
+        <tr>
+            <th><input type="text" value="" placeholder="クラブIDを入力してください" name="id"></th>
+            <th><input type="text" value="" placeholder="パスワードを入力してください" name="pass"></th>
+            <th><input type="text" value="" placeholder="クラブ名を入力してください" name="name"></th>
+            <th><input type="text" value="" placeholder="所属を入力してください" name="belonging"></th>
+            <th><input type="text" value="" placeholder="活動エリアを入力してください" name="area"></th>
+            <th><input type="text" value="" placeholder="カテゴリを入力してください" name="category"></th>
+        </tr>
+    </table>
+    <input type="submit" value="登録">
+</form>
+{% endblock %}

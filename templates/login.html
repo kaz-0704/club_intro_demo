@@ -1,0 +1,16 @@
+{% extends "layout.html" %}
+{% block contents %}
+    {% if check == False %}
+        <form action="/login" method="POST">
+            <ul>
+                <li><label for="id">クラブID</label><input type="text" id="id" placeholder="クラブIDを入力してください" name="id"></li>
+                <li><label for="pass">パスワード</label><input type="text" id="pass" placeholder="パスワードを入力してください" name="pass"></li>
+            </ul>
+            <button type="submit">ログイン</button>
+        </form>
+    {% endif %}
+    {% if check == True %}
+        <p>ログインしました</p>
+        <button class="button" onclick="location.href='/clubpage'">クラブページ</button>
+    {% endif %}
+{% endblock %}
